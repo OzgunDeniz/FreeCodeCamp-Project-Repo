@@ -7,7 +7,7 @@ class Results extends Component {
     }
     render() {
       {/* Change code below this line */}
-      return <h1>{this.props.fiftyFifty ? "You Win!" : "You Lose!"}</h1>;
+      return <h1>{this.props.fiftyFifty}</h1>;
       {/* Change code above this line */}
     }
   }
@@ -22,11 +22,11 @@ class Results extends Component {
     }
     handleClick() {
       this.setState({
-        counter: Math.random()
+        counter: Math.random()  
       });
     }
     render() {
-      const expression = Math.random() >= .5;
+      const expression = this.state.counter  >= 0.5 ?  "You Win!" : "You Lose!"
       return (
         <div>
           <button onClick={this.handleClick}>Play Again</button>
