@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyForm from './MyForm';
+
 
 class ControlledInput extends Component {
     constructor(props) {
@@ -22,13 +22,12 @@ class ControlledInput extends Component {
         
       return (
         <div>
-        <MyForm />
-
           { /* Change code below this line */}
           <input value={this.state.input} onChange={this.handleChange} />
           { /* Change code above this line */}
           <h4>Controlled Input:</h4>
           <p>{this.state.input}</p>
+          
         </div>
       );
     }
